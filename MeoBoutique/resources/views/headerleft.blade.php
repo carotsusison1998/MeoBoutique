@@ -14,7 +14,7 @@
             <ul aria-expanded="false" class="collapse">
                 <li><a href="{{ route('danh-sach-don-hang', $admin->id) }}">Đơn hàng mới tạo</a></li>
                 <li><a href="{{ route('danh-sach-don-hang-da-thanh-toan', $admin->id) }}">Đơn hàng đã thanh toán</a></li>
-                <li><a href="{{ route('danh-sach-don-hang-da-thanh-toan', $admin->id) }}">Đơn hàng bị trả</a></li>
+                <li><a href="{{ route('danh-sach-don-hang-bi-tra', $admin->id) }}">Đơn hàng bị trả</a></li>
             </ul>
         </li>
 

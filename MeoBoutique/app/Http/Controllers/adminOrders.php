@@ -98,4 +98,20 @@ class adminOrders extends Controller
         }
         return redirect()->back()->with('thongbao', 'thêm phiếu trả thành công');
     }
+
+    public function danhsachdonhangbitra($id)
+    {
+        $i = 1;
+        $phieutra = phieutra::orderBy('created_at', 'desc')->get();
+        return view('Orders.hrmorderreturn', compact('phieutra', 'i', 'id'));
+    }
+
+    public function chitietdonhangbitra($id, $id_donhang)
+    {
+        $i = 1; $sum = 0;
+        $phieutra = phieutra::find($id_donhang);
+        $khachhang = khachhang::where('id', $phieutra->id_khachhang)->first();
+        $chitietphieutra = chitietphieutra::where('id_phieutra', $phieutra->id)->get();
+        return view('Orders.detailorderproductreturn', compact('i', 'sum', 'khachhang', 'phieutra', 'chitietphieutra'));
+    }
 }

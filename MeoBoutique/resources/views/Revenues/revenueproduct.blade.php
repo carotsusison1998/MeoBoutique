@@ -31,18 +31,19 @@
 				@for($i = 1; $i <= 31; $i++)
 				<?php
 					$sum = 0;
+					$sum2 = 0;
 					$phieuxuat = \App\phieuxuat::where('ngaytao', $i."-".$date)->get();
+					$phieutra = \App\phieutra::where('ngaytao', $i."-".$date)->get();
 					foreach ($phieuxuat as $key => $value) {
 						$sum += $value['tonggia'];
 					}
 					$summonth += $sum;
-
 				?>
 				<tr>
 					<td>{{ $i }}-01-{{ $nam }}</td>
 					<td>{{ count($phieuxuat) }}</td>
 					<td>{{ number_format($sum) }} vnd</td>
-					<td>{{ 0 }}</td>
+					<td>{{ count($phieutra) }}</td>
 				</tr>
 				@endfor
 				<tr>
@@ -69,6 +70,8 @@
 				<?php
 					$sum = 0;
 					$phieuxuat = \App\phieuxuat::where('ngaytao', $i."-".$date)->get();
+					$phieutra = \App\phieutra::where('ngaytao', $i."-".$date)->get();
+
 					foreach ($phieuxuat as $key => $value) {
 						$sum += $value['tonggia'];
 					}
@@ -79,7 +82,7 @@
 					<td>{{ $i }}-02-{{ $nam }}</td>
 					<td>{{ count($phieuxuat) }}</td>
 					<td>{{ number_format($sum) }} vnd</td>
-					<td>0</td>
+					<td>{{ count($phieutra) }}</td>
 				</tr>
 				@endfor
 				<tr>
@@ -106,6 +109,8 @@
 				<?php
 					$sum = 0;
 					$phieuxuat = \App\phieuxuat::where('ngaytao', $i."-".$date)->get();
+					$phieutra = \App\phieutra::where('ngaytao', $i."-".$date)->get();
+
 					foreach ($phieuxuat as $key => $value) {
 						$sum += $value['tonggia'];
 					}
@@ -115,7 +120,7 @@
 					<td>{{ $i }}-03-{{ $nam }}</td>
 					<td>{{ count($phieuxuat) }}</td>
 					<td>{{ number_format($sum) }} vnd</td>
-					<td>0</td>
+					<td>{{ count($phieutra) }}</td>
 				</tr>
 				@endfor
 				<tr>
@@ -142,6 +147,8 @@
 				<?php
 					$sum = 0;
 					$phieuxuat = \App\phieuxuat::where('ngaytao', $i."-".$date)->get();
+					$phieutra = \App\phieutra::where('ngaytao', $i."-".$date)->get();
+
 					foreach ($phieuxuat as $key => $value) {
 						$sum += $value['tonggia'];
 					}
@@ -151,7 +158,7 @@
 					<td>{{ $i }}-04-{{ $nam }}</td>
 					<td>{{ count($phieuxuat) }}</td>
 					<td>{{ number_format($sum) }} vnd</td>
-					<td>0</td>
+					<td>{{ count($phieutra) }}</td>
 				</tr>
 				@endfor
 				<tr>
@@ -178,6 +185,8 @@
 				<?php
 					$sum = 0;
 					$phieuxuat = \App\phieuxuat::where('ngaytao', $i."-".$date)->get();
+					$phieutra = \App\phieutra::where('ngaytao', $i."-".$date)->get();
+
 					foreach ($phieuxuat as $key => $value) {
 						$sum += $value['tonggia'];
 					}
@@ -187,7 +196,7 @@
 					<td>{{ $i }}-05-{{ $nam }}</td>
 					<td>{{ count($phieuxuat) }}</td>
 					<td>{{ number_format($sum) }} vnd</td>
-					<td>0</td>
+					<td>{{ count($phieutra) }}</td>
 				</tr>
 				@endfor
 				<tr>
@@ -214,6 +223,8 @@
 				<?php
 					$sum = 0;
 					$phieuxuat = \App\phieuxuat::where('ngaytao', $i."-".$date)->get();
+					$phieutra = \App\phieutra::where('ngaytao', $i."-".$date)->get();
+
 					foreach ($phieuxuat as $key => $value) {
 						$sum += $value['tonggia'];
 					}
@@ -223,7 +234,7 @@
 					<td>{{ $i }}-06-{{ $nam }}</td>
 					<td>{{ count($phieuxuat) }}</td>
 					<td>{{ number_format($sum) }} vnd</td>
-					<td>0</td>
+					<td>{{ count($phieutra) }}</td>
 				</tr>
 				@endfor
 				<tr>
@@ -250,6 +261,8 @@
 				<?php
 					$sum = 0;
 					$phieuxuat = \App\phieuxuat::where('ngaytao', $i."-".$date)->get();
+					$phieutra = \App\phieutra::where('ngaytao', $i."-".$date)->get();
+
 					foreach ($phieuxuat as $key => $value) {
 						$sum += $value['tonggia'];
 					}
@@ -259,7 +272,7 @@
 					<td>{{ $i }}-07-{{ $nam }}</td>
 					<td>{{ count($phieuxuat) }}</td>
 					<td>{{ number_format($sum) }} vnd</td>
-					<td>0</td>
+					<td>{{ count($phieutra) }}</td>
 				</tr>
 				@endfor
 				<tr>
@@ -286,6 +299,8 @@
 				<?php
 					$sum = 0;
 					$phieuxuat = \App\phieuxuat::where('ngaytao', $i."-".$date)->get();
+					$phieutra = \App\phieutra::where('ngaytao', $i."-".$date)->get();
+
 					foreach ($phieuxuat as $key => $value) {
 						$sum += $value['tonggia'];
 					}
@@ -295,7 +310,7 @@
 					<td>{{ $i }}-08-{{ $nam }}</td>
 					<td>{{ count($phieuxuat) }}</td>
 					<td>{{ number_format($sum) }} vnd</td>
-					<td>0</td>
+					<td>{{ count($phieutra) }}</td>
 				</tr>
 				@endfor
 				<tr>
@@ -322,6 +337,8 @@
 				<?php
 					$sum = 0;
 					$phieuxuat = \App\phieuxuat::where('ngaytao', $i."-".$date)->get();
+					$phieutra = \App\phieutra::where('ngaytao', $i."-".$date)->get();
+
 					foreach ($phieuxuat as $key => $value) {
 						$sum += $value['tonggia'];
 					}
@@ -331,7 +348,7 @@
 					<td>{{ $i }}-09-{{ $nam }}</td>
 					<td>{{ count($phieuxuat) }}</td>
 					<td>{{ number_format($sum) }} vnd</td>
-					<td>0</td>
+					<td>{{ count($phieutra) }}</td>
 				</tr>
 				@endfor
 				<tr>
@@ -358,6 +375,8 @@
 				<?php
 					$sum = 0;
 					$phieuxuat = \App\phieuxuat::where('ngaytao', $i."-".$date)->get();
+					$phieutra = \App\phieutra::where('ngaytao', $i."-".$date)->get();
+
 					foreach ($phieuxuat as $key => $value) {
 						$sum += $value['tonggia'];
 					}
@@ -367,7 +386,7 @@
 					<td>{{ $i }}-10-{{ $nam }}</td>
 					<td>{{ count($phieuxuat) }}</td>
 					<td>{{ number_format($sum) }} vnd</td>
-					<td>0</td>
+					<td>{{ count($phieutra) }}</td>
 				</tr>
 				@endfor
 				<tr>
@@ -394,6 +413,8 @@
 				<?php
 					$sum = 0;
 					$phieuxuat = \App\phieuxuat::where('ngaytao', $i."-".$date)->get();
+					$phieutra = \App\phieutra::where('ngaytao', $i."-".$date)->get();
+
 					foreach ($phieuxuat as $key => $value) {
 						$sum += $value['tonggia'];
 					}
@@ -403,7 +424,7 @@
 					<td>{{ $i }}-11-{{ $nam }}</td>
 					<td>{{ count($phieuxuat) }}</td>
 					<td>{{ number_format($sum) }} vnd</td>
-					<td>0</td>
+					<td>{{ count($phieutra) }}</td>
 				</tr>
 				@endfor
 				<tr>
@@ -430,6 +451,8 @@
 				<?php
 					$sum = 0;
 					$phieuxuat = \App\phieuxuat::where('ngaytao', $i."-".$date)->get();
+					$phieutra = \App\phieutra::where('ngaytao', $i."-".$date)->get();
+
 					foreach ($phieuxuat as $key => $value) {
 						$sum += $value['tonggia'];
 					}
@@ -439,7 +462,7 @@
 					<td>{{ $i }}-12-{{ $nam }}</td>
 					<td>{{ count($phieuxuat) }}</td>
 					<td>{{ number_format($sum) }} vnd</td>
-					<td>0</td>
+					<td>{{ count($phieutra) }}</td>
 				</tr>
 				@endfor
 				<tr>

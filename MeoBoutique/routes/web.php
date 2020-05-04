@@ -51,8 +51,11 @@ Route::post('/luu-mot-san-pham-server/{id}', ['as' => 'luu-mot-san-pham-server',
 // danh sách đơn hàng
 Route::get('danh-sach-don-hang/{id}', ['as' => 'danh-sach-don-hang', 'uses' => 'adminOrders@danhsachdonhang']);
 Route::get('danh-sach-don-hang-da-thanh-toan/{id}', ['as' => 'danh-sach-don-hang-da-thanh-toan', 'uses' => 'adminOrders@danhsachdonhangdathanhtoan']);
+Route::get('danh-sach-don-hang-bi-tra/{id}', ['as' => 'danh-sach-don-hang-bi-tra', 'uses' => 'adminOrders@danhsachdonhangbitra']);
+
 Route::get('xac-nhan-don-hang/{id}/{id_donhang}', ['as' => 'xac-nhan-don-hang', 'uses' => 'adminOrders@xacnhandonhang']);
 Route::get('chi-tiet-don-hang/{id}/{id_donhang}', ['as' => 'chi-tiet-don-hang', 'uses' => 'adminOrders@chitietdonhang']);
+Route::get('chi-tiet-don-hang-bi-tra/{id}/{id_donhang}', ['as' => 'chi-tiet-don-hang-bi-tra', 'uses' => 'adminOrders@chitietdonhangbitra']);
 Route::get('them-phieu-tra-don-hang/{id}',['as' => 'them-phieu-tra-don-hang', 'uses' => 'adminOrders@getthemphieutradonhang']);
 Route::post('them-phieu-tra-don-hang/{id}',['as' => 'them-phieu-tra-don-hang', 'uses' => 'adminOrders@postthemphieutradonhang']);
 Route::get('xoa-tat-ca-phieu-tra-don-hang/{id}',['as' => 'xoa-tat-ca-phieu-tra-don-hang', 'uses' => 'adminOrders@xoaphieutradonhang']);
